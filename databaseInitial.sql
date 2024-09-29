@@ -14,3 +14,14 @@ ALTER TABLE Products
     FOREIGN KEY (category_id)
     REFERENCES Categories(Id);
 
+
+-- Product Ratings
+CREATE TABLE ProductRatings (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    ProductId INT NOT NULL,
+    Rating INT CHECK (Rating >= 1 AND Rating <= 5),
+    CONSTRAINT fk_product
+        FOREIGN KEY (ProductId)
+        REFERENCES Products(Id)
+);
+
