@@ -8,6 +8,8 @@ public class DatabaseContext :DbContext
     public DbSet<Product> Products {get;set;}
     
     public DbSet<Categories> Categories { get; set; }
+    public DbSet<ProductRating> ProductRatings { get; set; }
+
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
