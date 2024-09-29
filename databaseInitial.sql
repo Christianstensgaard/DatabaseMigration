@@ -25,3 +25,10 @@ CREATE TABLE ProductRatings (
         REFERENCES Products(Id)
 );
 
+
+-- Product table
+CREATE TABLE products(
+  Id int PRIMARY key AUTO_INCREMENT,
+  Name VARCHAR(86) NOT NULL,
+  Price DECIMAL(10,2) NOT NULL
+);
