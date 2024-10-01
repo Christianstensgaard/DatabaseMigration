@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "pass123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    networks:
+      - app-network
+  app:
+    build: .
+    container_name: dotnetapp
+    environment:
+      SQLSERVER_CONNECTION_STRING: "Server=sqlserver,1433;Database=mydb;User Id=sa;Password=pass123;"
+    ports:
+      - "8080:80"
+    depends_on:
+      - sqlserver
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

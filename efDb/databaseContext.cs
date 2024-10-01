@@ -11,7 +11,16 @@ public class DatabaseContext :DbContext
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+{
+    var connectionString = Environment.GetEnvironmentVariable("SQLSERVER_CONNECTION_STRING");
+    if (!string.IsNullOrEmpty(connectionString))
     {
-        optionsBuilder.UseSqlServer("ConnectionString");
+        optionsBuilder.UseSqlServer(connectionString);
     }
+    else
+    {
+        throw new InvalidOperationException("Connection string is not provided.");
+    }
+}
+
 }
