@@ -40,7 +40,7 @@
    using MySql.Data;
    using MySql.Data.MySqlClient;
    ```
-  >[!INFORMATION]
+  > [!INFORMATION]
   > You can set up the connection to the database using the MySqlConnection class.
 
   ```csharp
