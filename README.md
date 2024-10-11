@@ -1,5 +1,5 @@
 # Manual Database Migration
-> **IMPORTANT**
+> [!IMPORTANT]
 > The goal of this part of the project is to perform manual database migrations.
 
 # Documentation Includes
@@ -40,7 +40,7 @@
    using MySql.Data;
    using MySql.Data.MySqlClient;
    ```
-  > [!INFORMATION]
+  > [!WARNING]
   > You can set up the connection to the database using the MySqlConnection class.
 
   ```csharp
@@ -50,7 +50,7 @@
   > The connStr is the connection string used to connect to the database. It may vary, but should look something like this:
   > ***server=localhost;user=root;database=world;port=3306;password=password***
 
-  > [!INFORMATION]
+  > [!WARNING]
   > For more information on getting started, check out this step-by-step guide:
   > [Getting Started with MySQL](#)
 
