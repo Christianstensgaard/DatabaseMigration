@@ -28,5 +28,4 @@
 
   so this is a simple demostration of how this could be created.
 
-
-## ENTITY FRAMEWORK
+## ENTITY FRAMEWORK 
