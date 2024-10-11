@@ -3,13 +3,14 @@
 > The goal of this part of the project is to perform manual database migrations.
 
 # Documentation Includes
-1. **Getting Started**
+1. **[Getting Started](#getting-started)**
+  
    - This section will help you get up and running using Docker.
 
-2. **Documentation**
+2. **[Documentation](#)**
    - Contains information about the database, including added shell scripts and other details.
 
-3. **Rollback Guide**
+3. **[Rollback Guide](#Rollback)**
    - Instructions on how to roll back the different migrations.
 
 # Getting Started
@@ -40,24 +41,31 @@
    using MySql.Data;
    using MySql.Data.MySqlClient;
    ```
-  > [!WARNING]
-  > You can set up the connection to the database using the MySqlConnection class.
+    > [!WARNING]
+    > You can set up the connection to the database using the MySqlConnection class.
 
-  ```csharp
-    MySqlConnection conn = new MySqlConnection(connStr);
-  ```
-  > [!NOTE]
-  > The connStr is the connection string used to connect to the database. It may vary, but should look something like this:
-  > ***server=localhost;user=root;database=world;port=3306;password=password***
+    ```csharp
+      MySqlConnection conn = new MySqlConnection(connStr);
+    ```
+    > [!NOTE]
+    > The connStr is the connection string used to connect to the database. It may vary, but should look something like this:
+    > ***server=localhost;user=root;database=world;port=3306;password=password***
 
-  > [!WARNING]
-  > For more information on getting started, check out this step-by-step guide:
-  > [Getting Started with MySQL](#)
+    > [!WARNING]
+    > For more information on getting started, check out this step-by-step guide:
+    > [Getting Started with MySQL](#)
 
 
-5. **Handle Rollback**
+
+
+# Rollback
+## **Handle Rollback**
   > [!WARNING]
   > The rollback script is still under development and is for demo purposes only, so some parts of the script may not work!
 
   - Rollbacks can be handled easily with the included scripts.
   - If you prefer not to use the included scripts, all rollback scripts are created separately and can be used individually.
+
+## **Rollback**
+  - Placeholder for something else
+
